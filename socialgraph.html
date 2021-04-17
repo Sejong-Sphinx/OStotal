@@ -1,0 +1,207 @@
+<html>
+	<head>
+
+	</head>
+	<script src="https://www.amcharts.com/lib/4/core.js"></script>
+	<script src="https://www.amcharts.com/lib/4/charts.js"></script>
+	<script src="https://www.amcharts.com/lib/4/plugins/forceDirected.js"></script>
+	<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+	<!-- <script src="socialgraph.js"></script> -->
+	<link rel="stylesheet" href="socialgraph.css">
+	
+	<body>
+			<div id="chartdiv"></div>
+	</body>    
+
+	<script>
+		am4core.useTheme(am4themes_animated);
+// Themes end
+
+	var chart = am4core.create("chartdiv", am4plugins_forceDirected.ForceDirectedTree);
+	var networkSeries = chart.series.push(new am4plugins_forceDirected.ForceDirectedSeries())
+
+	chart.data = [
+	{
+		name: "Red Star 3.0",
+		fixed: true, // 노드 위치 고정 여부
+		x: am4core.percent(20),
+		y: am4core.percent(50),  
+		children: [
+		{
+			name: "Linux 2.6.38",
+			children: [
+			{ name: "A1", value: 2 }, // 자식 노드들의 value 값들의 합이 부모 노드의 원 크기를 결정함 
+			{ name: "A2", 
+				children: [
+					{ name: "AA1", value: 1 },
+					{ name: "AA2", value: 1 }
+				]}
+			]
+	},
+	{
+		name: "Red Star 2.0",
+		children: [
+		{ name: "B1", value: 1 },
+		{ name: "B2", value: 1 }
+		]
+	},
+	{
+		name: "Redhat",
+		children: [
+		{
+				name: "C1",
+				children: [
+				{ name: "EE1", value: 1 },
+				{ name: "EE2", value: 1 },
+				{ name: "EE3", value: 1 }
+				]
+		},
+		{ name: "C2", value: 1 },
+		{
+				name: "C3", children: [
+				{ name: "CC1", value: 1 },
+				{ name: "CC2", value: 1 }
+				]
+		},
+		{ name: "C4", value: 1 }
+		]
+	},
+	{
+		name: "Mac OS X",
+		children: [
+		{ name: "D1", value: 1 },
+		{ name: "D2", value: 1 },
+		{ name: "D3", value: 1 }
+		]
+	},
+//   {
+//     name: "Fifth",
+//     children: [
+//       {
+//         name: "E1",
+//         children: [
+//           { name: "EE1", value: 33 },
+//           { name: "EE2", value: 40 },
+//           { name: "EE3", value: 89 }
+//         ]
+//       },
+//       {
+//         name: "E2",
+//         value: 148
+//       }
+//     ]
+//   }
+	]
+	},
+	{
+		name: "Windows 10",
+		children: [
+		{
+			name: "a",
+			children: [
+			{ name: "A1", value: 1 },
+			{ name: "A2", 
+				children: [
+					{ name: "AA1", value: 1 },
+					{ name: "AA2", value: 1 }
+				]}
+			]
+		},
+		]
+	},
+	{
+		name: "OS3",
+		children: [
+		{
+			name: "b",
+			children: [
+			{ name: "A1", value: 1 },
+			{ name: "A2", 
+				children: [
+					{ name: "AA1", value: 1 },
+					{ name: "AA2", value: 1 }
+				]}
+			]
+		},
+		]
+	},
+	{
+		name: "OS4",
+		children: [
+		{
+			name: "c",
+			children: [
+				{ name: "A1", value: 1 },
+				{ name: "A2", 
+					children: [
+						{ name: "AA1", value: 1 },
+						{ name: "AA2", value: 1 }
+					]}
+			]
+		},
+		]
+	}
+	];
+
+	networkSeries.dataFields.value = "value";
+	networkSeries.dataFields.name = "name";
+	networkSeries.dataFields.children = "children";
+	// networkSeries.nodes.template.tooltipText = "{name}: {value}";
+	networkSeries.nodes.template.tooltipText = "OS 이름: {name}\n버전: 1.0\n다른 사용자 리뷰: https://www.review.com";
+	
+
+	//// 노드에 마우스 올렸을 때 나타나는 말풍선 = tooltip
+	/*
+	networkSeries.nodes.template.adapter.add("tooltipText", function(text, target) {
+		if (target.dataItem) {
+			switch(target.dataItem.level) {
+				case 0:
+					return "#1: {name}";
+				case 1:
+					return "#2: {parent.name} > {name} ({value})";
+				case 2:
+					return "#3: {parent.parent.name} > {parent.name} > {name} ({value})";
+			}
+		}
+		return text;
+	});
+	*/
+
+	networkSeries.nodes.template.fillOpacity = 1;
+	networkSeries.manyBodyStrength = -20; // 원 사이 저항도? 조정. 값 수정 시 원 사이 간격 달라짐
+	networkSeries.links.template.strength = 0.8;
+	networkSeries.minRadius = am4core.percent(1.5);  // 원 크기 조정
+
+	networkSeries.nodes.template.label.text = "{name}" // 원 안에 표시되는 이름
+	networkSeries.fontSize = 11;
+
+	// 1. 색깔 지정
+	// networkSeries.colors.list = [
+	//     am4core.color("#F42B03"),
+	//     am4core.color("#D84A05"),
+	//     am4core.color("#EC7505"),
+	//     am4core.color("#E89005")
+	// ]
+
+	// 2. 노드 클릭시 자식 노드 숨김 기능 on/off
+	// networkSeries.nodes.template.togglable = false;
+
+	// 3. 특정 노드 위치 고정 기능
+	// networkSeries.dataFields.fixed = "fixed";
+	// series.nodes.template.propertyFields.x = "x";
+	// series.nodes.template.propertyFields.y = "y";	
+
+	// 4. 노드 사이 저항 조절 (0 ~ 1 사이의 값으로 지정)
+	// networkSeries.events.on("inited", function() {
+  // networkSeries.animate({
+  //   property: "velocityDecay",
+  //   to: 1
+  // }, 3000);
+	// });
+
+	// 5. 마우스 스크롤로 줌인 줌아웃 기능
+	// chart.zoomable = true;
+
+
+	</script>
+</html>
