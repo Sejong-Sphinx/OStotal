@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="title" content="OStotal" />
+    <meta name="description" content="OS Analysis Project" />
+    <meta name="author" content="" />
+    <title>OStotal</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script>
+    $(function(){
+
+        //마우스 스크롤할때 nav background 변경~
+        $(window).scroll(function(){     
+            var st = $(document).scrollTop();
+            var navbarHeight = $('.header').outerHeight(); 
+            if(st<navbarHeight){
+                $('.header').css('background', 'transparent');
+            } else {
+                $('.header').css('background', '#212529');
+            }
+        });
+
+        // Smooth scrolling using jQuery easing
+        $('.smooth-scroll').click(function () {
+            $('html, body').animate({scrollTop: $(this.hash).offset().top - 50}, 500);
+            return false;
+        });
+        
+
+       //파일 업로드 이름 뜨게~ 
+        var fileTarget = $('#file');
+        fileTarget.on('change', function(){
+            var cur = $(".uploadFile input[type='file']").val();
+            $(".upload-name").val(cur);
+            $(".uploadFile label").html('Upload');
+        });
+
+        
+    });
+    </script>
+</head>
+<body>
+    <!-- Navigation-->
+    <div class="header">
+        <div class="headWrap">
+            <div class="logo"><a href="#"><img src="../ostotal/img/logo.png" alt="OStotal LOGO"></a></div>
+            <div class="nav">
+                <ul>
+                    <li><a class="smooth-scroll" href="#uploadSec">upload</a></li>
+                    <li><a href="#">library</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="contents">
+        <div class="mainSec">
+            <div class="text">
+                <h3>Analyze your OS</h3>
+                <p>당신의 OS는 어디서 왔는지<br>다른 사용자들은 어떤 OS를 분석했는지<br><br>지금 당신의 OS를 업로드해서 확인해보세요!</p>
+            </div>
+            <a class="mainUploadBtn smooth-scroll" href="#uploadSec">UPLOAD HERE!</a>
+        </div>
+        <div class="uploadSec" id="uploadSec">
+            <div class="title">
+                <h3>UPLOAD</h3>
+                <p class="disc">Upload KVM image for OS analysis</p>
+            </div>
+            <div class="uploadFile">
+                <input type="file" id="file"><input class="upload-name" value="Choose File" readonly><label for="file">Browse</label>
+            </div>
+            <div class="uploadedList">
+                <div class="title">> Recent Uploaded</div>
+                <div class="list">
+                    <ul>
+                        <li><a href="#">
+                            <div class="img">IMAGE</div>
+                            <div class="cardInfo">
+                                <div class="cardTitle">Card Title</div>
+                                <div class="cardDisc">day6 day6 day6 day6day6 day6 day6 day6 day6 day6day6 day6 day6 day6day6day6 day6 day6 day6 day6day6 day6 day6 day6 day6day6 day6 day6 day6 day6</div>
+                            </div>
+                        </a></li>
+                        <li><a href="#">
+                            <div class="img">IMAGE</div>
+                            <div class="cardInfo">
+                                <div class="cardTitle">Card Title</div>
+                                <div class="cardDisc">day6 day6 day6 day6 day6 day6day6 day6 day6 day6day6 day6 day6 day6 day6day6 day6 day6 day6 day6day6 day6 day6 day6 day6day6 day6 day6 day6 day6</div>
+                            </div>
+                        </a></li>
+                        <li><a href="#">
+                            <div class="img">IMAGE</div>
+                            <div class="cardInfo">
+                                <div class="cardTitle">Card Title</div>
+                                <div class="cardDisc">day6 day6 day6 day6 day6 day6 day6 day6 day6 day6day6 day6 day6 day6 day6day6 day6 day6 day6 day6day6 day6 day6 day6 day6day6 day6 day6 day6 day6</div>
+                            </div>
+                        </a></li>
+                        <li><a href="#">
+                            <div class="img">IMAGE</div>
+                            <div class="cardInfo">
+                                <div class="cardTitle">Card Title</div>
+                                <div class="cardDisc">day6 day6 day6 day6 day6 day6 day6 day6 day6 day6day6 day6 day6 day6 day6day6 day6 day6 day6 day6day6 day6 day6 day6 day6day6 day6 day6 day6 day6</div>
+                            </div>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
