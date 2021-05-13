@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>OStotal</title>
+    <link href="css/loading.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="headWrap">
+            <div class="logo"><a href="#"><img src="../ostotal/img/logo.png" alt="OStotal LOGO"></a></div>
+            <div class="nav">
+                <ul>
+                    <li><a class="smooth-scroll" href="#uploadSec">upload</a></li>
+                    <li><a href="#">library</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="loadtext">LOADING</h1>
+    <div class="progress-bar">
+        <span class="bar">
+          <span class="progress"></span>
+        </span>
+    </div>   
+    <span id="percentage">0%</span>
+    <div>
+        <span id="time">0.0s</span>
+    </div> 
+
+    <script type="text/javascript">
+        // var totaltime = 30;
+        var count = parseInt($('#time').text());
+        myCounter = setInterval(function () {
+            count+=0.1;
+            $('#time').html(count.toFixed(1) + "s");
+
+            // if(count==totaltime) clearInterval(myCounter);
+        }, 100);
+
+        $(document).ready(function() {
+            var percent = parseInt($('#percentage').text());
+            var myPercent = setInterval(function(){
+                percent++;
+                $("#percentage").html(percent + "%");      
+
+                if(percent == 100) {
+                    clearInterval(myPercent);
+                }
+            }, 250);
+        });
+    </script>
+</body>
+</html>
