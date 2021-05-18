@@ -6,27 +6,70 @@
 </head>
 <body>
 	<main>
-
 		<section id="communitySection">
+			<section id="commentSection">
+				<textarea name="addcomment" id="commentInput" placeholder="Write a comment about your opinion on the OS..."></textarea>
+				<section>
+					&nbsp;
+					<label for="addtag">Tags: </label>&nbsp;
+					<input name="addtag" id="tagInput" placeholder="# Add tags"/>
+				</section>
+				<section style="display: flex; align-items: center; justify-content: space-between; padding-left: 10px;">
+					<div id="tagsList" style="width: 70%">
+						<div class="tagElement"># recommended</div>
+					</div>
+					<div>
+						<button id="commentButton">Add</button>
+					</div>
+
+				</section>
+			</section>
 			<article class="card">
-				<div class="card-body">
+				<section class="card-body">
 					<div class="row mb-2">
-						<div class="col-3" style="align-items: center;">
-							<img class="float-end" id="profileImg" src="/user3.png" alt="profile image">				
+						<div class="col-4">
+							<h4 class="card-title" style="font-weight: 600">Sora Kang</h4>
 						</div>
-						<div class="col-9">
-							<h4 class="card-title">User1</h4>
-							<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+						<div class="col-3">
+							<div style="color: #9f9f9f">2 days ago</div>
+						</div>
+					</div>
+					<div class="row mb-2">
+						<div class="col-8">
+							<p>
+								I strongly recommend this OS <br/>
+								It's the best! <br/>
+								blah blah blah b.... <br/>
+							</p>
+						</div>
+						<div class="col-4" style="display: inline-flex; align-items: center; justify-content: flex-end; text-align: center">
+							<div style="margin-right: 30px">
+								<img style="width: 30px; height: 30px; margin-bottom:10px; cursor: pointer" src="/img/like.png" alt="like comment icon">
+								<div>10</div>
+							</div>
+							<div>
+								<img style="width: 30px; height: 30px; margin-bottom:10px; cursor: pointer" src="/img/dislike.png" alt="dislike comment icon">
+								<div>1</div>
+							</div>
+						</div>
+					</div>
+					<div class="row" style="padding-left: calc(var(--bs-gutter-x)/ 2);">
+						<div class="tagElement">
+							# safe
+						</div>
+						<div class="tagElement">
+							# pretty
 						</div>
 					</div>
 				</div>
 			</article>
 
+		<!--
 			<article class="card">
 				<div class="card-body">
 					<div class="row mb-2">
 						<div class="col-3">
-							<img class="float-end" id="profileImg" src="/user3.png" alt="profile image">				
+							<img class="float-end" id="profileImg" src="/img/user4.png" alt="profile image">				
 						</div>
 						<div class="col-9">
 							<h4 class="card-title">User1</h4>
@@ -35,6 +78,7 @@
 					</div>
 				</div>
 			</article>
+		-->
 		</section>
 	</main>
     
