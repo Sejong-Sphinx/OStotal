@@ -12,9 +12,13 @@ body {
   letter-spacing: -0.3px;
   font-weight: 300;
 }
+#headerSection {
+  width: 90%;
+  margin-bottom: 30px;
+}
 #communitySection {
   width: 40%;
-  height: 500px;
+  height: 700px;
   min-width: 600px;
   padding: 10px;
   margin: 40px auto;
@@ -44,19 +48,43 @@ body {
 #commentInput:focus {
   outline: none !important;
 }
-#tagInput {
-  width: 40%;
+.tag {
+  width: fit-content !important;
+  height: fit-content;
+  border-radius: 8px;
+  background-color: #f3f3f3;
+  padding: 2px 13px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-right: 8px;
+}
+.tag > p {
+  margin: 0;
+}
+#tagSection {
+  width: 100%;
+  display: inline-flex;
+  /* align-items: center;
+  justify-content: space-between; */
+  padding-left: 10px;
+}
+#tagList {
+  display: flex;
+  align-items: center;
+}
+#tag {
+  width: 130px;
   height: 35px;
   padding: 4px 12px;
 
   border: 2px #ececec solid;
   border-radius: 10px;
 }
-#tagInput:focus {
+#tag:focus {
   outline: none !important;
 }
 #commentInput::placeholder,
-#tagInput::placeholder {
+#tag::placeholder {
   color: #a0a0a0;
 }
 #communitySection > .card {
@@ -74,19 +102,14 @@ body {
   border: none;
   border-radius: 10px;
 }
-
-.tagElement {
-  width: fit-content !important;
-  border-radius: 8px;
-  background-color: #f3f3f3;
-  padding: 2px 13px;
-  font-size: 13px;
-  font-weight: 500;
-  margin-right: 8px;
-}
-#profileImg {
-  width: 70px;
-  height: 70px;
-  border-radius: 100%;
+.likeIcon,
+.dislikeIcon {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
   cursor: pointer;
+}
+
+#hiddenCard {
+  display: none;
 }
