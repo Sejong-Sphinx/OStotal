@@ -117,6 +117,51 @@
 		}
 	] 
 }, {
-	"name": "Red Hat", "value": 1
+	"name": "Red Hat",
+	"children": [
+		{ "name": "Fedora Core", 
+			"children": [
+				{ "name": "Fedora", 
+					"children": [
+						{ "name": "Moblin2", 
+							"children": [
+								{ "name": "Mer", "value": 1 },
+								{ "name": "Tizen", "value": 1 }
+							] },
+						{ "name": "Synergy", "value": 1 },
+						{ "name": "Fusion", "value": 1 },
+						{ "name": "Viperr", "value": 1 },
+						{ "name": "Vortexbox", "value": 1 }
+					] 
+				},
+				{ "name": "MythDora", "value": 1 },
+				{ "name": "Berry", "value": 1 },
+				{ "name": "NST", "value": 1 }
+			] 
+		},
+		{ "name": "Mandrake", 
+			"children": [
+				{ "name": "PCLinuxOS", 
+					"children": [
+						{ "name": "Granular", "value": 1 },
+						{ "name": "TinyMe", "value": 1 },
+						{ "name": "Phinx", "value": 1 },
+						{ "name": "Garuda", "value": 1 }
+					]
+				},
+				{ "name": "Unity", "children": [{ "name": "ChameleonOS", "value": 1 }] },
+				{ "name": "Demolinux", "value": 1 },
+				{ "name": "ALT", "value": 1 }
+			] 
+		},
+		{ "name": "Calera", 
+			"children": [
+				{ "name": "SCO", "value": 1 },
+				{ "name": "Redmond", "value": 1 },
+				{ "name": "Lycoris", "value": 1 }
+			] 
+		},
+		{ "name": "WGS Linux Pro", "value": 1 }
+	]
 }
 ]

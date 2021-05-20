@@ -73,8 +73,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Add comment 버튼 클릭 시
 	document.querySelector('#commentButton').addEventListener('click', () => {
-		console.log('clicked');
 		document.querySelector('#hiddenCard').style.display="block";
+		
+		document.querySelector('#username').value='';
+		document.querySelector('#commentInput').value='';
+		document.querySelector('#tagList').children[0].remove();
+		clearTextContent("tag");
 	});
 
 
