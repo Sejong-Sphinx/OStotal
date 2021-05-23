@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title> New Document </title>
+  <meta charset="utf-8"/>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.js"></script>
+
+<script type="text/javascript">
+     function fileread(){
+        const objectURL = window.URL.createObjectURL("netstat.txt");
+        fetch(objectURL)
+  .then(response => response.text())
+  .then(data => {
+  	// Do something with your data
+  	console.log(data);
+  });
+        // const file = './ostotal/netstat.txt' // provide file location
+
+
+
+        // // var file = document.getElementById("file").files[0];
+        // var reader = new FileReader();
+        // reader.readAsText(file, "utf-8");
+        // reader.onload=function(){
+        //     var view=document.getElementById("content");
+        //     view.textContent = reader.result;
+        // };
+     }
+</script>
+
+ </head>   
+ <body>
+    <input id="file" type="file">
+    <input type="button" onclick="fileread()" value="파일 내용 확인">
+    <br/>
+    <table id="table"></table>
+    <textarea id="content" readonly style="width:600px; height:500px;"></textarea>
+ </body>
+</html>

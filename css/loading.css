@@ -100,7 +100,7 @@ Edit these at random intervals to change the animation. */
     font-size:1em;
     font-weight: 400;
     position:absolute;
-    left:52%;
+    left:51%;
     top:53%;
     transform: translate(-50%,0%);
     color:#c2c2c2;
@@ -111,7 +111,7 @@ Edit these at random intervals to change the animation. */
     color: #c2c2c2;
     position: absolute;
     transform: translate(-50%,-50%);
-    left: 79%;
+    left: 77.5%;
     font-family: 'Roboto' ;
     font-weight: 600;
     font-size: 1.5em;
