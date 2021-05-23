@@ -1,0 +1,126 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap");
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  /* font rule */
+  font-family: "Noto Sans KR", sans-serif;
+  letter-spacing: -0.3px;
+  font-weight: 300;
+}
+a {
+  text-decoration: none !important;
+}
+#headerSection {
+  width: 90%;
+  margin-bottom: 30px;
+}
+#communitySection {
+  position: relative;
+  top: 80px;
+
+  width: 40%;
+  height: 700px;
+  min-width: 600px;
+  padding: 10px;
+  margin: 40px auto;
+  /* border: 1px solid;
+  border-radius: 10px; */
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* font */
+  font-family: "Roboto", sans-serif !important;
+}
+#commentSection {
+  width: 90%;
+}
+
+#commentInput {
+  resize: none;
+  width: 100%;
+  height: 100px;
+  padding: 13px 15px;
+
+  border: 2px #ececec solid;
+  border-radius: 20px;
+}
+#commentInput:focus {
+  outline: none !important;
+}
+.tag {
+  width: fit-content !important;
+  height: fit-content;
+  border-radius: 8px;
+  background-color: #f3f3f3;
+  padding: 2px 13px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-right: 8px;
+}
+.tag > p {
+  margin: 0;
+}
+#tagSection {
+  width: 100%;
+  display: inline-flex;
+  /* align-items: center;
+  justify-content: space-between; */
+  padding-left: 10px;
+}
+#tagList {
+  display: flex;
+  align-items: center;
+}
+#tag,
+#username {
+  width: 130px;
+  height: 35px;
+  padding: 4px 12px;
+
+  border: 2px #ececec solid;
+  border-radius: 10px;
+
+  font-weight: 300;
+}
+#tag:focus,
+#username:focus {
+  outline: none !important;
+}
+#commentInput::placeholder,
+#tag::placeholder,
+#username::placeholder {
+  color: #a0a0a0;
+}
+#communitySection > .card {
+  width: 90%;
+  border: 0px !important;
+  /* border-radius: 10px !important; */
+  /* margin: 20px 0; */
+}
+#commentButton {
+  width: 110px;
+  height: 35px;
+  background-color: #3aaaaa;
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+}
+.likeIcon,
+.dislikeIcon {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+#hiddenCard {
+  display: none;
+}
