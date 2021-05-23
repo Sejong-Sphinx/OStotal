@@ -17,9 +17,11 @@
 .dashWrap .dashGrid .dashNode:nth-child(1) img {width: 310px;}
 .dashWrap .dashGrid .dashNode:nth-child(1) h4{ font-weight: 500;}
 .dashWrap .dashGrid .dashNode:nth-child(1) .osInfo { display: inline-flex; font-size: 13px; margin-left: 10px;}
-.dashWrap .dashGrid .dashNode:nth-child(2) { width:40%; height:650px; float:right; overflow: scroll;}
+.dashWrap .dashGrid .dashNode:nth-child(2) { width:40%; height:620px; float:right;}
 .dashWrap .dashGrid .dashNode:nth-child(2) .nodeProcesses{ width: 1000px;}
+.dashWrap .dashGrid .dashNode:nth-child(2) object{width: 600px; height: 530px; margin-top:15px}
+.dashWrap .dashGrid .dashNode:nth-child(2) object * { white-space: pre !important; }
 .dashWrap .dashGrid .dashNode:nth-child(3) { width:25%; height:300px;}
-.dashWrap .dashGrid .dashNode:nth-child(3) canvas{margin: 40px 0 0 10px;}
+.dashWrap .dashGrid .dashNode:nth-child(3) .chartSize{ width: 350px; margin: 40px 0 0 10px;}
 .dashWrap .dashGrid .dashNode:nth-child(4) { width:calc(35% - 60px); height:300px;}
-/* .dashWrap .dashGrid .dashNode:nth-child(5) {  } */
+.dashWrap .dashGrid .dashNode:nth-child(4) object { width: 455px; height: 210px; margin-top: 5px;}

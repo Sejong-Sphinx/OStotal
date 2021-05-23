@@ -29,16 +29,15 @@
             return false;
         });
         
-
        //파일 업로드 이름 뜨게~ 
         var fileTarget = $('#file');
         fileTarget.on('change', function(){
             var cur = $(".uploadFile input[type='file']").val();
             $(".upload-name").val(cur);
-            $(".uploadFile label").html('Upload');
+            document.getElementById("b_btn").style.display ='none';
+            document.getElementById("u_btn").style.display ='block';
         });
 
-        
     });
     </script>
 </head>
@@ -72,7 +71,8 @@
                 <p class="disc">Upload KVM image for OS analysis</p>
             </div>
             <div class="uploadFile">
-                <input type="file" id="file"><input class="upload-name" value="Choose File" readonly><label for="file">Browse</label>
+                <input type="file" id="file"><input class="upload-name" value="Choose File" readonly><label id="b_btn" for="file">Browse</label>
+                <a id="u_btn" href="loading.html">Upload</a>
             </div>
             <div class="uploadedList">
                 <div class="title">> Recent Uploaded</div>

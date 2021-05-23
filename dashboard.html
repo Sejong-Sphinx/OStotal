@@ -49,57 +49,61 @@
                 </div>
                 <div class="dashNode">
                     <h3 class="nodeName">Processes List</h3>
+                    <object data="file/linuxfile/pstree.txt"></object>
                 </div>
                 <div class="dashNode">
                     <h3 class="nodeName">CPU Usage</h3>
-                    <canvas id="myChart"></canvas>
-                    <script>
-                        var ctx = document.getElementById('myChart');
-                        var myChart = new Chart(ctx, {
-                            type: 'line',
-                            data: {
-                                labels: ['00:00','','', '00:05','','', '00:10','','', '00:15','','', '00:20','','', '00:25'],
-                                datasets: [{
-                                    label: '# CPU usage',
-                                    data: [0.03, 0.055, 0.05, 0.08, 0.075, 0.045, 0.07, 0.035, 0.040, 0.02, 0.02, 0.025, 0.01, 0.0125, 0.01, 0.01],
-                                    backgroundColor: [
-                                        'rgba(54, 162, 235, 0.2)'
-                                    ],
-                                    borderColor: [
-                                        'rgb(54, 162, 235)'
-                                    ],
-                                    borderWidth: 1
-                                }]
-                            },
-                            options: {        
-                                legend: {
-                                    display: false
-                                },
-                                scales: {
-                                    xAxes: [{
-                                        gridLines: {
-                                            display:false
-                                        },
-                                        ticks: {
-                                            fontSize : 12,
-                                        }
-                                    }],
-                                    yAxes: [{
-                                        gridLines: {
-                                            display:false
-                                        },
-                                        ticks: {
-                                            beginAtZero: true,
-                                            fontSize : 12,
-                                        }
+                    <div class="chartSize">
+                        <canvas id="myChart"></canvas>
+                        <script>
+                            var ctx = document.getElementById('myChart');
+                            var myChart = new Chart(ctx, {
+                                type: 'line',
+                                data: {
+                                    labels: ['00:00','','', '00:05','','', '00:10','','', '00:15','','', '00:20','','', '00:25'],
+                                    datasets: [{
+                                        label: '# CPU usage',
+                                        data: [0.03, 0.055, 0.05, 0.08, 0.075, 0.045, 0.07, 0.035, 0.040, 0.02, 0.02, 0.025, 0.01, 0.0125, 0.01, 0.01],
+                                        backgroundColor: [
+                                            'rgba(54, 162, 235, 0.2)'
+                                        ],
+                                        borderColor: [
+                                            'rgb(54, 162, 235)'
+                                        ],
+                                        borderWidth: 1
                                     }]
+                                },
+                                options: {        
+                                    legend: {
+                                        display: false
+                                    },
+                                    scales: {
+                                        xAxes: [{
+                                            gridLines: {
+                                                display:false
+                                            },
+                                            ticks: {
+                                                fontSize : 12,
+                                            }
+                                        }],
+                                        yAxes: [{
+                                            gridLines: {
+                                                display:false
+                                            },
+                                            ticks: {
+                                                beginAtZero: true,
+                                                fontSize : 12,
+                                            }
+                                        }]
+                                    }
                                 }
-                            }
-                        });
-                    </script>
+                            });
+                        </script>
+                    </div>
                 </div>
                 <div class="dashNode">
                     <h3 class="nodeName">Network List</h3>
+                    <div><object data="file/linuxfile/netstat.txt"></object></div>
                 </div>
                 <!-- <div class="dashNode"></div> -->
             </div>
