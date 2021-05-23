@@ -115,12 +115,17 @@ div, p { color:#000; }
     border-radius: 0 5px 5px 0;}
 .contents .uploadSec .uploadedList {  }
 .contents .uploadSec .uploadedList .title { font-family: 'Montserrat', sans-serif; font-weight: bold; text-align: left; margin:0 0 10px; font-size:20px; }
-.contents .uploadSec .uploadedList .list { width:1080px; margin:0 auto; }
-.contents .uploadSec .uploadedList .list ul { overflow: hidden; }
-.contents .uploadSec .uploadedList .list ul li {  float: left; width: 23%; border: 1px solid #c8c8c8; margin-right:2%; }
+.contents .uploadSec .uploadedList .list { width:1080px; margin: 40px auto; }
+.contents .uploadSec .uploadedList .list ul { overflow: hidden; display: flex; }
+.contents .uploadSec .uploadedList .list ul li {  
+  width: 200px; border: 1.5px solid #c8c8c8; border-radius:10px; margin-right: 5%; padding: 25px 0;}
 .contents .uploadSec .uploadedList .list ul li:last-child { margin-right:0; }
 .contents .uploadSec .uploadedList .list ul li a {  }
 .contents .uploadSec .uploadedList .list ul li a .img { height:8em; line-height:8em; background:#f1f1f1; }
 .contents .uploadSec .uploadedList .list ul li a .cardInfo { padding:10px; }
-.contents .uploadSec .uploadedList .list ul li a .cardInfo .cardTitle {  }
+.contents .uploadSec .uploadedList .list ul li a .cardInfo .cardTitle { font-family: 'Roboto', sans-serif; font-size: 20px; font-weight: 500; margin: 8px 0; }
 .contents .uploadSec .uploadedList .list ul li a .cardInfo .cardDisc { color: #797979; font-size: 0.8rem; }
+
+.oslogo {
+  width: 100px;
+}
