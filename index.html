@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -10,53 +11,54 @@
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script>
-    $(function(){
+        $(function () {
 
-        //마우스 스크롤할때 nav background 변경~
-        $(window).scroll(function(){     
-            var st = $(document).scrollTop();
-            var navbarHeight = $('.header').outerHeight(); 
-            if(st<navbarHeight){
-                $('.header').css('background', 'transparent');
-            } else {
-                $('.header').css('background', '#212529');
-            }
-        });
+            //마우스 스크롤할때 nav background 변경~
+            $(window).scroll(function () {
+                var st = $(document).scrollTop();
+                var navbarHeight = $('.header').outerHeight();
+                if (st < navbarHeight) {
+                    $('.header').css('background', 'transparent');
+                } else {
+                    $('.header').css('background', '#212529');
+                }
+            });
 
-        // Smooth scrolling using jQuery easing
-        $('.smooth-scroll').click(function () {
-            $('html, body').animate({scrollTop: $(this.hash).offset().top - 50}, 500);
-            return false;
-        });
-        
-       //파일 업로드 이름 뜨게~ 
-        var fileTarget = $('#file');
-        fileTarget.on('change', function(){
-            var cur = $(".uploadFile input[type='file']").val();
-            $(".upload-name").val(cur);
-            document.getElementById("b_btn").style.display ='none';
-            document.getElementById("u_btn").style.display ='block';
-        });
+            // Smooth scrolling using jQuery easing
+            $('.smooth-scroll').click(function () {
+                $('html, body').animate({ scrollTop: $(this.hash).offset().top - 50 }, 500);
+                return false;
+            });
 
-    });
+            //파일 업로드 이름 뜨게~ 
+            var fileTarget = $('#file');
+            fileTarget.on('change', function () {
+                var cur = $(".uploadFile input[type='file']").val();
+                $(".upload-name").val(cur);
+                document.getElementById("b_btn").style.display = 'none';
+                document.getElementById("u_btn").style.display = 'block';
+            });
+
+        });
     </script>
 </head>
+
 <body>
     <!-- Navigation-->
     <div class="header">
         <div class="headWrap">
-            <div class="logo"><a href="#"><img src="../img/logo.png" alt="OStotal LOGO"></a></div>
+            <div class="logo"><a href="/"><img src="../img/logo.png" alt="OStotal LOGO"></a></div>
             <div class="nav">
                 <ul>
                     <li><a class="smooth-scroll" href="#uploadSec">upload</a></li>
-                    <li><a href="#">library</a></li>
+                    <li><a href="/socialgraph.html">library</a></li>
                     <li><a href="#">about</a></li>
                     <li><a href="#">contact</a></li>
                 </ul>
             </div>
         </div>
     </div>
-    
+
     <div class="contents">
         <div class="mainSec">
             <div class="text">
@@ -68,48 +70,37 @@
         <div class="uploadSec" id="uploadSec">
             <div class="title">
                 <h3>UPLOAD</h3>
-                <p class="disc">Upload KVM image for OS analysis</p>
+                <p class="disc">Upload iso file for OS analysis</p>
             </div>
             <div class="uploadFile">
-                <input type="file" id="file"><input class="upload-name" value="Choose File" readonly><label id="b_btn" for="file">Browse</label>
+                <input type="file" id="file"><input class="upload-name" value="Choose File" readonly><label id="b_btn"
+                    for="file">Browse</label>
                 <a id="u_btn" href="loading.html">Upload</a>
             </div>
             <div class="uploadedList">
-                <div class="title">> Recent Uploaded</div>
+                <div class="title">> Recent Uploads</div>
                 <div class="list">
                     <ul>
+                        <li><a href="/community.html">
+                                <img class="oslogo" src="../img/ubuntu-logo.png" alt="recent uploaded OS 1">
+                                <div class="cardInfo">
+                                    <div class="cardTitle">Ubuntu 18.04</div>
+                                    <div class="cardDisc">12 hours ago</div>
+                                </div>
+                            </a></li>
                         <li><a href="#">
-                            <div class="img">IMAGE</div>
-                            <div class="cardInfo">
-                                <div class="cardTitle">Card Title</div>
-                                <div class="cardDisc">day6 day6 day6 day6day6 day6 day6 day6 day6 day6day6 day6 day6 day6day6day6 day6 day6 day6 day6day6 day6 day6 day6 day6day6 day6 day6 day6 day6</div>
-                            </div>
-                        </a></li>
-                        <li><a href="#">
-                            <div class="img">IMAGE</div>
-                            <div class="cardInfo">
-                                <div class="cardTitle">Card Title</div>
-                                <div class="cardDisc">day6 day6 day6 day6 day6 day6day6 day6 day6 day6day6 day6 day6 day6 day6day6 day6 day6 day6 day6day6 day6 day6 day6 day6day6 day6 day6 day6 day6</div>
-                            </div>
-                        </a></li>
-                        <li><a href="#">
-                            <div class="img">IMAGE</div>
-                            <div class="cardInfo">
-                                <div class="cardTitle">Card Title</div>
-                                <div class="cardDisc">day6 day6 day6 day6 day6 day6 day6 day6 day6 day6day6 day6 day6 day6 day6day6 day6 day6 day6 day6day6 day6 day6 day6 day6day6 day6 day6 day6 day6</div>
-                            </div>
-                        </a></li>
-                        <li><a href="#">
-                            <div class="img">IMAGE</div>
-                            <div class="cardInfo">
-                                <div class="cardTitle">Card Title</div>
-                                <div class="cardDisc">day6 day6 day6 day6 day6 day6 day6 day6 day6 day6day6 day6 day6 day6 day6day6 day6 day6 day6 day6day6 day6 day6 day6 day6day6 day6 day6 day6 day6</div>
-                            </div>
-                        </a></li>
+                                <img class="oslogo" src="img/redstar.png" alt="recent uploaded OS 2">
+                                <div class="cardInfo">
+                                    <div class="cardTitle">Red Star 3.0</div>
+                                    <div class="cardDisc">1 day ago</div>
+                                </div>
+                            </a></li>
+
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>
