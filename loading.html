@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <meta http-equiv="refresh" content="25; url=dashboard.html">
     <title>OStotal</title>
     <link href="css/loading.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
@@ -54,9 +53,9 @@
             var myPercent = setInterval(function(){
                 percent++;
                 $("#percentage").html(percent + "%");      
-
                 if(percent == 100) {
-                    clearInterval(myPercent);
+                    location.href="/dashboard.html";
+                //     clearInterval(myPercent);
                 }
             }, 250);
         });
