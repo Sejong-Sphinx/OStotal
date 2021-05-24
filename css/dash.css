@@ -4,17 +4,17 @@
 .dashWrap .dashGrid { overflow: hidden; }
 .dashWrap .dashGrid .dashNode { background:white; float:left; width:100%;  margin:10px;  padding: 15px;  box-sizing: border-box; border-radius: 10px; box-shadow: 0 0 15px rgb(0 0 0 / 10%); }
 .dashWrap .dashGrid .dashNode .nodeName{ margin-bottom: 10px}
-.dashWrap .dashGrid .dashNode:nth-child(1) { width:calc(60% - 40px); height:300px; font-weight: 400;}
-.dashWrap .dashGrid .dashNode:nth-child(1) .nodeContent{ margin:15px}
+.dashWrap .dashGrid .dashNode:nth-child(1) { width:60%; height:300px; font-weight: 400;}
+.dashWrap .dashGrid .dashNode:nth-child(1) .nodeContent{ margin:15px; position: relative;}
 .dashWrap .dashGrid .dashNode:nth-child(1) img {width: 310px;}
 .dashWrap .dashGrid .dashNode:nth-child(1) h4{ font-weight: 500;}
-.dashWrap .dashGrid .dashNode:nth-child(1) .osInfo { display: inline-flex; font-size: 13px; margin-left: 10px;}
-.dashWrap .dashGrid .dashNode:nth-child(1) .cmuBtn { background: #13989e; color: #fff; float: right; border-radius: 5px; text-align: center; padding:10px 25px; margin:150px 0 0; }
-.dashWrap .dashGrid .dashNode:nth-child(2) { width:40%; height:620px; float:right;}
+.dashWrap .dashGrid .dashNode:nth-child(1) .osInfo { display: inline-flex; font-size: 13px; margin-left: 10px; z-index:-1}
+.dashWrap .dashGrid .dashNode:nth-child(1) .cmuBtn { background: #13989e; color: #fff; float: right; border-radius: 5px; text-align: center; padding:10px 25px; position: absolute; right:10px; top:-3px;}
+.dashWrap .dashGrid .dashNode:nth-child(2) { width:calc(40% - 40px); height:620px; float:right;}
 .dashWrap .dashGrid .dashNode:nth-child(2) .nodeProcesses{ width: 1000px;}
-.dashWrap .dashGrid .dashNode:nth-child(2) object{width: 600px; height: 530px; margin-top:15px}
-.dashWrap .dashGrid .dashNode:nth-child(2) object * { white-space: pre !important; }
+.dashWrap .dashGrid .dashNode:nth-child(2) object{width: 560px; height: 530px; margin-top:15px}
 .dashWrap .dashGrid .dashNode:nth-child(3) { width:25%; height:300px;}
-.dashWrap .dashGrid .dashNode:nth-child(3) .chartSize{ width: 350px; margin: 40px 0 0 10px;}
-.dashWrap .dashGrid .dashNode:nth-child(4) { width:calc(35% - 60px); height:300px;}
-.dashWrap .dashGrid .dashNode:nth-child(4) object { width: 455px; height: 210px; margin-top: 5px;}
+.dashWrap .dashGrid .dashNode:nth-child(3) .chartSize{ width: 350px; margin: 25px 0 0 10px;}
+.dashWrap .dashGrid .dashNode:nth-child(3) .chartSize p{ padding:0 0 10px 5px; font-size: 12px;}
+.dashWrap .dashGrid .dashNode:nth-child(4) { width:calc(35% - 20px); height:300px;}
+.dashWrap .dashGrid .dashNode:nth-child(4) object { width: 500px; height: 210px; margin-top: 5px;}

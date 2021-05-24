@@ -35,17 +35,17 @@
                     <div class="nodeContent">
                         <h4>Ubuntu 18.04</h4>
                         <img src="/img/ubuntubg.png" alt="OS Background">
+                        <a class="cmuBtn" href="/community.html">커뮤니티 보기</a>
                         <div class="osInfo">
                             File Name: ubuntu-18.04.4-desktop-amd64.iso<br>
                             Size: 1,348,312 KB<br><br>
                             Hash:<br>
-                            md5<br>
-                            sha256<br><br>
+                            md5 &emsp;&emsp;&nbsp;c73e0f186476a78d691c48b493b54669<br>
+                            sha256 &emsp;72b79ee2ca46cd4850080265622b83af7a38322f4c633812d49ba4b1571f5b2d<br><br>
                             History:<br>
-                            First submission<br>
-                            Last submission
+                            First submission &emsp;2020-05-12<br>
+                            Last submission &emsp;2020-05-24
                         </div>
-                        <a class="cmuBtn" href="/community.html">커뮤니티 보기</a>
                     </div>
                 </div>
                 <div class="dashNode">
@@ -55,6 +55,7 @@
                 <div class="dashNode">
                     <h3 class="nodeName">CPU Usage</h3>
                     <div class="chartSize">
+                        <p>( % )</p>
                         <canvas id="myChart"></canvas>
                         <script>
                             var ctx = document.getElementById('myChart');
@@ -64,7 +65,7 @@
                                     labels: ['00:00','','', '00:05','','', '00:10','','', '00:15','','', '00:20','','', '00:25'],
                                     datasets: [{
                                         label: '# CPU usage',
-                                        data: [0.03, 0.055, 0.05, 0.08, 0.075, 0.045, 0.07, 0.035, 0.040, 0.02, 0.02, 0.025, 0.01, 0.0125, 0.01, 0.01],
+                                        data: [30, 55, 50, 100, 75, 45, 7, 35, 40, 20, 20, 25, 10, 12.5, 10, 10],
                                         backgroundColor: [
                                             'rgba(54, 162, 235, 0.2)'
                                         ],
