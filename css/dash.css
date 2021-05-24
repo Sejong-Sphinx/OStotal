@@ -2,21 +2,14 @@
 .header {background-color:#212529}
 .dashWrap { width:1600px; margin:0 auto; padding:50px 0; }
 .dashWrap .dashGrid { overflow: hidden; }
-.dashWrap .dashGrid .dashNode { 
-  background:white;
-  float:left; width:100%; 
-  margin:10px; 
-  padding: 15px; 
-  box-sizing: border-box;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgb(0 0 0 / 10%);
-}
+.dashWrap .dashGrid .dashNode { background:white; float:left; width:100%;  margin:10px;  padding: 15px;  box-sizing: border-box; border-radius: 10px; box-shadow: 0 0 15px rgb(0 0 0 / 10%); }
 .dashWrap .dashGrid .dashNode .nodeName{ margin-bottom: 10px}
 .dashWrap .dashGrid .dashNode:nth-child(1) { width:calc(60% - 40px); height:300px; font-weight: 400;}
 .dashWrap .dashGrid .dashNode:nth-child(1) .nodeContent{ margin:15px}
 .dashWrap .dashGrid .dashNode:nth-child(1) img {width: 310px;}
 .dashWrap .dashGrid .dashNode:nth-child(1) h4{ font-weight: 500;}
 .dashWrap .dashGrid .dashNode:nth-child(1) .osInfo { display: inline-flex; font-size: 13px; margin-left: 10px;}
+.dashWrap .dashGrid .dashNode:nth-child(1) .cmuBtn { background: #13989e; color: #fff; float: right; border-radius: 5px; text-align: center; padding:10px 25px; margin:150px 0 0; }
 .dashWrap .dashGrid .dashNode:nth-child(2) { width:40%; height:620px; float:right;}
 .dashWrap .dashGrid .dashNode:nth-child(2) .nodeProcesses{ width: 1000px;}
 .dashWrap .dashGrid .dashNode:nth-child(2) object{width: 600px; height: 530px; margin-top:15px}

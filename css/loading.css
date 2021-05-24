@@ -77,7 +77,7 @@ Edit these at random intervals to change the animation. */
 }
 
 .progress {
-  animation: loader 25s ease infinite;
+  animation: loader 25s ease forwards;
   /* Change the animation fill mode 'infinite' to 'forwards' to stop the animation from repeating. */
   background: #13989e;
   color: #fff;

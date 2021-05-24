@@ -33,8 +33,8 @@
             //파일 업로드 이름 뜨게~ 
             var fileTarget = $('#file');
             fileTarget.on('change', function () {
-                var cur = $(".uploadFile input[type='file']").val();
-                $(".upload-name").val(cur);
+                var file = document.getElementById("file").files[0];
+                $(".upload-name").val(file.name);
                 document.getElementById("b_btn").style.display = 'none';
                 document.getElementById("u_btn").style.display = 'block';
             });
@@ -47,7 +47,7 @@
     <!-- Navigation-->
     <div class="header">
         <div class="headWrap">
-            <div class="logo"><a href="/"><img src="../img/logo.png" alt="OStotal LOGO"></a></div>
+            <div class="logo"><a href="/"><img src="/img/logo.png" alt="OStotal LOGO"></a></div>
             <div class="nav">
                 <ul>
                     <li><a class="smooth-scroll" href="#uploadSec">upload</a></li>
@@ -73,7 +73,7 @@
                 <p class="disc">Upload iso file for OS analysis</p>
             </div>
             <div class="uploadFile">
-                <input type="file" id="file"><input class="upload-name" value="Choose File" readonly><label id="b_btn"
+                <input type="file" id="file"><input class="upload-name" value="Choose File"><label id="b_btn"
                     for="file">Browse</label>
                 <a id="u_btn" href="loading.html">Upload</a>
             </div>
@@ -81,8 +81,8 @@
                 <div class="title">> Recent Uploads</div>
                 <div class="list">
                     <ul>
-                        <li><a href="/dashboard.html">
-                                <img class="oslogo" src="../img/ubuntu-logo.png" alt="recent uploaded OS 1">
+                        <li><a href="/community.html">
+                                <img class="oslogo" src="/img/ubuntu-logo.png" alt="recent uploaded OS 1">
                                 <div class="cardInfo">
                                     <div class="cardTitle">Ubuntu 18.04</div>
                                     <div class="cardDisc">12 hours ago</div>
