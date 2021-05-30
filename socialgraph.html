@@ -114,10 +114,10 @@
 	chart.zoomable = true;
 
 
-	//  노드 클릭시 Ubuntu 커뮤니티 페이지로 이동
+	//  노드 클릭시 Ubuntu 소셜 그래프 페이지로 이동
 	networkSeries.nodes.template.events.on("hit", function (event) {
 		// chart.zoomToDataItem(event.target.dataItem, 3, true);
-		location.href = "/community.html";
+		location.href = "/ubuntu-socialgraph.html";
 	});
 
 
