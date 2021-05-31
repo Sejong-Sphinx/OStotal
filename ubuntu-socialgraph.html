@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+<title>OStotal</title>
+<script src="https://www.amcharts.com/lib/4/core.js"></script>
+<script src="https://www.amcharts.com/lib/4/charts.js"></script>
+<script src="https://www.amcharts.com/lib/4/plugins/forceDirected.js"></script>
+<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+<!-- <script src="socialgraph.js"></script> -->
+<link rel="stylesheet" href="/css/socialgraph.css">
+<link rel="stylesheet" href="/css/styles.css">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+
+<body>
+    <!-- Navigation-->
+    <div class="header" style="background-color: #212529; position:relative;">
+        <div class="headWrap" style="margin:0 auto; padding: 20px 0">
+            <div class="logo"><a href="/index.html"><img src="/img/logo.PNG" alt="OStotal LOGO"></a></div>
+            <div class="nav">
+                <ul>
+                    <li><a class="smooth-scroll" href="/">upload</a></li>
+                    <li><a href="/socialgraph.html">library</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="searchdiv">
+        <input id="searchBar" class="form-control" type="text" placeholder="Type in OS name to search.."
+            aria-label="os name search">
+        <button id="searchButton">
+            <img src="/img/loupe.png" alt="Search button">
+        </button>
+    </div>
+    <div id="chartdiv"></div>
+</body>
+
+<script>
+    am4core.useTheme(am4themes_animated);
+    // Themes end
+
+    var chart = am4core.create("chartdiv", am4plugins_forceDirected.ForceDirectedTree);
+    var networkSeries = chart.series.push(new am4plugins_forceDirected.ForceDirectedSeries())
+    networkSeries.dataSource.url = "ubuntu_data.json";
+
+    // Set up data fields
+    networkSeries.dataFields.value = "value";
+    networkSeries.dataFields.name = "name";
+    networkSeries.dataFields.children = "children";
+    // networkSeries.nodes.template.tooltipText = "Official website:\nhttps://www.{name}.com";
+    networkSeries.nodes.template.tooltipText = "Official website:\nhttps://www.ubuntu.com";
+
+
+
+    //// 노드에 마우스 올렸을 때 나타나는 말풍선 = tooltip
+    /*
+    networkSeries.nodes.template.adapter.add("tooltipText", function(text, target) {
+        if (target.dataItem) {
+            switch(target.dataItem.level) {
+                case 0:
+                    return "#1: {name}";
+                case 1:
+                    return "#2: {parent.name} > {name} ({value})";
+                case 2:
+                    return "#3: {parent.parent.name} > {parent.name} > {name} ({value})";
+            }
+        }
+        return text;
+    });
+    */
+
+    networkSeries.nodes.template.fillOpacity = 1;
+    networkSeries.manyBodyStrength = -20; // 원 사이 저항도? 조정. 값 수정 시 원 사이 간격 달라짐
+    networkSeries.links.template.strength = 0.8;
+    networkSeries.minRadius = am4core.percent(1.5);  // 원 크기 조정
+
+    networkSeries.nodes.template.label.text = "{name}" // 원 안에 표시되는 이름
+    networkSeries.fontSize = 11;
+
+    // 1. 색깔 지정
+    // networkSeries.colors.list = [
+    //     am4core.color("#F42B03"),
+    //     am4core.color("#D84A05"),
+    //     am4core.color("#EC7505"),
+    //     am4core.color("#E89005")
+    // ]
+
+    // 2. 노드 클릭시 자식 노드 숨김 기능 on/off
+    networkSeries.nodes.template.togglable = false;
+
+    // 3. 특정 노드 위치 고정 기능
+    // networkSeries.dataFields.fixed = "fixed";
+    // series.nodes.template.propertyFields.x = "x";
+    // series.nodes.template.propertyFields.y = "y";	
+
+    // 4. 노드 사이 저항 조절 (0 ~ 1 사이의 값으로 지정)
+    // networkSeries.events.on("inited", function() {
+    // networkSeries.animate({
+    //   property: "velocityDecay",
+    //   to: 1
+    // }, 3000);
+    // });
+
+    // 5. 마우스 스크롤로 줌인 줌아웃 기능
+    chart.zoomable = true;
+
+
+    //  노드 클릭시 Ubuntu 커뮤니티 페이지로 이동
+    networkSeries.nodes.template.events.on("hit", function (event) {
+        // chart.zoomToDataItem(event.target.dataItem, 3, true);
+        // console.log(event.target.dataItem.name);
+        location.href = "/community/ubuntu" + event.target.dataItem.name + ".html";
+    });
+
+
+    // 검색 바 버튼 클릭 시
+    document.querySelector('#searchButton').addEventListener('click', event => {
+        // alert('hi');
+        // console.log(document.querySelector('#searchBar').getAttribute('value'));
+        console.log(networkSeries.nodes.values);
+        chart.zoomToDataItem(networkSeries.nodes.values[1].dataItem, 3, true);
+    })
+
+</script>
+
+</html>
