@@ -35,7 +35,7 @@
                     <div class="nodeContent">
                         <h4>Red Star 3.0</h4>
                         <img class="redstarbg" src="/img/redstarbg.png" alt="OS Background">
-                        <a class="cmuBtn" href="/community.html">커뮤니티 보기</a>
+                        <a class="cmuBtn" href="/community/redstar3.0.html">커뮤니티 보기</a>
                         <div class="osInfo">
                             File Name: redstar_desktop3.0_sign.iso<br>
                             Size: 2,614,645 KB<br><br>
@@ -53,18 +53,14 @@
                     <textarea id="redpsfile"></textarea>
                     <script>
                         readTextFile("/file/redstarfile/pstree.txt");
-                        function readTextFile(file)
-                        {
+                        function readTextFile(file) {
                             var rawFile = new XMLHttpRequest();
                             rawFile.open("GET", file, false);
-                            rawFile.onreadystatechange = function ()
-                            {
-                                if(rawFile.readyState === 4)
-                                {
-                                    if(rawFile.status === 200 || rawFile.status == 0)
-                                    {
+                            rawFile.onreadystatechange = function () {
+                                if (rawFile.readyState === 4) {
+                                    if (rawFile.status === 200 || rawFile.status == 0) {
                                         var allText = rawFile.responseText;
-                                        document.getElementById("redpsfile").innerHTML=allText;
+                                        document.getElementById("redpsfile").innerHTML = allText;
                                     }
                                 }
                             }
@@ -82,7 +78,7 @@
                             var myChart = new Chart(ctx, {
                                 type: 'line',
                                 data: {
-                                    labels: ['00:00','','', '00:05','','', '00:10','','', '00:15','','', '00:20','','', '00:25'],
+                                    labels: ['00:00', '', '', '00:05', '', '', '00:10', '', '', '00:15', '', '', '00:20', '', '', '00:25'],
                                     datasets: [{
                                         label: '# CPU usage',
                                         data: [30, 80, 100, 97, 100, 85, 95, 90, 40, 25, 30, 25, 15, 12.5, 15, 10],
@@ -95,26 +91,26 @@
                                         borderWidth: 1
                                     }]
                                 },
-                                options: {        
+                                options: {
                                     legend: {
                                         display: false
                                     },
                                     scales: {
                                         xAxes: [{
                                             gridLines: {
-                                                display:false
+                                                display: false
                                             },
                                             ticks: {
-                                                fontSize : 12,
+                                                fontSize: 12,
                                             }
                                         }],
                                         yAxes: [{
                                             gridLines: {
-                                                display:false
+                                                display: false
                                             },
                                             ticks: {
                                                 beginAtZero: true,
-                                                fontSize : 12,
+                                                fontSize: 12,
                                             }
                                         }]
                                     }
@@ -128,18 +124,14 @@
                     <textarea id="rednetfile"></textarea>
                     <script>
                         readTextFile("file/redstarfile/netstat.txt");
-                        function readTextFile(file)
-                        {
+                        function readTextFile(file) {
                             var rawFile = new XMLHttpRequest();
                             rawFile.open("GET", file, false);
-                            rawFile.onreadystatechange = function ()
-                            {
-                                if(rawFile.readyState === 4)
-                                {
-                                    if(rawFile.status === 200 || rawFile.status == 0)
-                                    {
+                            rawFile.onreadystatechange = function () {
+                                if (rawFile.readyState === 4) {
+                                    if (rawFile.status === 200 || rawFile.status == 0) {
                                         var allText = rawFile.responseText;
-                                        document.getElementById("rednetfile").innerHTML=allText;
+                                        document.getElementById("rednetfile").innerHTML = allText;
                                     }
                                 }
                             }
@@ -151,4 +143,5 @@
         </div>
     </div>
 </body>
+
 </html>
