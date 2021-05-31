@@ -1,0 +1,65 @@
+init-+-artsd
+     |-auditd---{auditd}
+     |-avahi-daemon---avahi-daemon
+     |-chkutild---logout_process
+     |-console-kit-dae---63*[{console-kit-dae}]
+     |-cupsd
+     |-2*[dbus-daemon---{dbus-daemon}]
+     |-dbus-launch
+     |-dcopserver
+     |-dhclient
+     |-duid
+     |-esavermanager
+     |-gconfd-2
+     |-hald-+-hald-runner-+-hald-addon-acpi
+     |      |             |-hald-addon-inpu
+     |      |             |-hald-addon-rfki
+     |      |             `-hald-addon-stor
+     |      `-{hald}
+     |-ibus-x11
+     |-intcheck---{intcheck}
+     |-intcheck_kde---{intcheck_kde}
+     |-kcald
+     |-kcontroltray
+     |-kded
+     |-kdeinit-+-chkutil_client
+     |         |-ibus-daemon-+-ibus-engine-han
+     |         |             |-ibus-gconf
+     |         |             |-python
+     |         |             `-{ibus-daemon}
+     |         |-7*[kio_file]
+     |         |-2*[kio_lanis]
+     |         |-5*[kio_media]
+     |         |-2*[kio_smb]
+     |         |-kio_trash
+     |         |-klauncher
+     |         |-konsole---bash---pstree
+     |         |-kwin---kompmgr
+     |         |-rssidebardaemon---lshosts---smbtree
+     |         |-scnprc---{scnprc}
+     |         `-simpletext
+     |-kdesktop
+     |-kdm-+-X---2*[{X}]
+     |     `-kdm---startkde-+-kwrapper
+     |                      `-ssh-agent
+     |-kicker
+     |-kio_uiserver
+     |-klipper
+     |-klogd
+     |-kmix
+     |-knotify
+     |-konqueror
+     |-ksmserver
+     |-mingetty
+     |-nmbd
+     |-opprc---2*[{opprc}]
+     |-restorecond
+     |-rpc.idmapd
+     |-rpcbind
+     |-rsdock
+     |-securityd
+     |-smbd---2*[smbd]
+     |-snmpd
+     |-snmptrapd
+     |-syslogd
+     `-udevd---2*[udevd]

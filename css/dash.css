@@ -6,15 +6,24 @@
 .dashWrap .dashGrid .dashNode .nodeName{ margin-bottom: 10px}
 .dashWrap .dashGrid .dashNode:nth-child(1) { width:60%; height:300px; font-weight: 400;}
 .dashWrap .dashGrid .dashNode:nth-child(1) .nodeContent{ margin:15px; position: relative;}
-.dashWrap .dashGrid .dashNode:nth-child(1) img {width: 310px;}
+.dashWrap .dashGrid .dashNode:nth-child(1) .ubuntubg {width: 310px;}
+.dashWrap .dashGrid .dashNode:nth-child(1) .redstarbg {width: 260px;}
 .dashWrap .dashGrid .dashNode:nth-child(1) h4{ font-weight: 500;}
 .dashWrap .dashGrid .dashNode:nth-child(1) .osInfo { display: inline-flex; font-size: 13px; margin-left: 10px; z-index:-1}
 .dashWrap .dashGrid .dashNode:nth-child(1) .cmuBtn { background: #13989e; color: #fff; float: right; border-radius: 5px; text-align: center; padding:10px 25px; position: absolute; right:10px; top:-3px;}
 .dashWrap .dashGrid .dashNode:nth-child(2) { width:calc(40% - 40px); height:620px; float:right;}
 .dashWrap .dashGrid .dashNode:nth-child(2) .nodeProcesses{ width: 1000px;}
-.dashWrap .dashGrid .dashNode:nth-child(2) object{width: 560px; height: 530px; margin-top:15px}
+.dashWrap .dashGrid .dashNode:nth-child(2) textarea{width: 550px; height: 535px; margin:10px 0 0 10px; padding-left:5px; white-space:pre; border:none;}
 .dashWrap .dashGrid .dashNode:nth-child(3) { width:25%; height:300px;}
 .dashWrap .dashGrid .dashNode:nth-child(3) .chartSize{ width: 350px; margin: 25px 0 0 10px;}
 .dashWrap .dashGrid .dashNode:nth-child(3) .chartSize p{ padding:0 0 10px 5px; font-size: 12px;}
 .dashWrap .dashGrid .dashNode:nth-child(4) { width:calc(35% - 20px); height:300px;}
-.dashWrap .dashGrid .dashNode:nth-child(4) object { width: 500px; height: 210px; margin-top: 5px;}
+.dashWrap .dashGrid .dashNode:nth-child(4) .netcontent { width: 490px; height: 225px; margin: 10px 0 0 10px; overflow: scroll;}
+.dashWrap .dashGrid .dashNode:nth-child(4) #rednetfile { width: 490px; height: 225px; margin: 10px 0 0 10px; padding-left:5px; overflow: scroll; white-space:pre; border:none;}
+.dashWrap .dashGrid .dashNode:nth-child(4) .netcontent textarea { width: 480px; padding-left:5px; white-space:pre; border:none; overflow: hidden;}
+.dashWrap .dashGrid .dashNode:nth-child(4) .netcontent textarea:nth-child(1) { height: 75px;}
+.dashWrap .dashGrid .dashNode:nth-child(4) .netcontent textarea:nth-child(2) { height: 35px; color:red; margin-top:-3px;}
+.dashWrap .dashGrid .dashNode:nth-child(4) .netcontent textarea:nth-child(3) { height: 18400px; margin-top:-3px;}
+.dashWrap .dashGrid .dashNode:nth-child(4) h3{ display: inline;}
+.dashWrap .dashGrid .dashNode:nth-child(4) h5{ display: inline; color: red;}
+.dashWrap .dashGrid .dashNode:nth-child(4) img{ width: 20px; margin: 7px 5px 0 15px;}

@@ -1,16 +1,12 @@
-Active Internet connections (servers and established)
-Proto Recv-Q Send-Q Local Address           Foreign Address         State      
-tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN     
-tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN     
-tcp6       0      0 ::1:631                 :::*                    LISTEN     
-udp        0      0 0.0.0.0:631             0.0.0.0:*                          
-udp        0      0 0.0.0.0:42029           0.0.0.0:*                          
-udp        0      0 0.0.0.0:5353            0.0.0.0:*                          
-udp        0      0 127.0.0.53:53           0.0.0.0:*                          
-udp        0      0 0.0.0.0:68              0.0.0.0:*                          
-udp6       0      0 :::5353                 :::*                               
-udp6       0      0 :::46623                :::*                               
-raw6       0      0 :::58                   :::*                    7          
+tcp6                0                0 ::1:631                                :::*                                           LISTEN     
+udp                0                0 0.0.0.0:631                       0.0.0.0:*                          
+udp                0                0 0.0.0.0:42029                  0.0.0.0:*                          
+udp                0                0 0.0.0.0:5353                     0.0.0.0:*                          
+udp                0                0 127.0.0.53:53                  0.0.0.0:*                          
+udp                0                0 0.0.0.0:68                          0.0.0.0:*                          
+udp6              0                0 :::5353                                :::*                               
+udp6              0                0 :::46623                             :::*                               
+raw6              0                0 :::58                                     :::*                                           7          
 Active UNIX domain sockets (servers and established)
 Proto RefCnt Flags       Type       State         I-Node   Path
 unix  2      [ ACC ]     STREAM     LISTENING     45533    /tmp/.X11-unix/X1024
@@ -516,6 +512,7 @@ unix  3      [ ]         STREAM     CONNECTED     51432
 unix  3      [ ]         STREAM     CONNECTED     51918    
 unix  3      [ ]         STREAM     CONNECTED     47913    
 unix  3      [ ]         STREAM     CONNECTED     47772    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     70647    
 unix  3      [ ]         STREAM     CONNECTED     52891    
 unix  3      [ ]         STREAM     CONNECTED     51356    
 unix  3      [ ]         STREAM     CONNECTED     48025    @/tmp/dbus-C4keUwND
@@ -547,6 +544,7 @@ unix  3      [ ]         STREAM     CONNECTED     51065
 unix  3      [ ]         STREAM     CONNECTED     51925    /run/user/1000/bus
 unix  3      [ ]         STREAM     CONNECTED     47969    /run/systemd/journal/stdout
 unix  3      [ ]         STREAM     CONNECTED     48626    
+unix  3      [ ]         STREAM     CONNECTED     71469    /run/systemd/journal/stdout
 unix  3      [ ]         STREAM     CONNECTED     52879    
 unix  2      [ ]         DGRAM                    50059    
 unix  3      [ ]         STREAM     CONNECTED     48060    @/tmp/.X11-unix/X1024
@@ -578,6 +576,7 @@ unix  3      [ ]         STREAM     CONNECTED     52088
 unix  3      [ ]         DGRAM                    50651    
 unix  3      [ ]         STREAM     CONNECTED     47860    /run/systemd/journal/stdout
 unix  3      [ ]         STREAM     CONNECTED     47771    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     71485    /run/user/1000/bus
 unix  3      [ ]         STREAM     CONNECTED     54598    @/tmp/dbus-2mpHWHsY
 unix  3      [ ]         STREAM     CONNECTED     52920    
 unix  3      [ ]         STREAM     CONNECTED     48733    
@@ -594,6 +593,7 @@ unix  3      [ ]         STREAM     CONNECTED     52744    /run/user/1000/bus
 unix  3      [ ]         STREAM     CONNECTED     50882    
 unix  3      [ ]         STREAM     CONNECTED     48653    
 unix  3      [ ]         STREAM     CONNECTED     47862    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    71725    
 unix  2      [ ]         STREAM     CONNECTED     68979    @/tmp/dbus-huMr0GmA
 unix  3      [ ]         STREAM     CONNECTED     59207    @/tmp/dbus-xTas7OdKXJ
 unix  3      [ ]         STREAM     CONNECTED     52995    /run/systemd/journal/stdout
@@ -656,6 +656,7 @@ unix  3      [ ]         STREAM     CONNECTED     49770    /run/systemd/journal/
 unix  3      [ ]         STREAM     CONNECTED     52010    
 unix  3      [ ]         STREAM     CONNECTED     47925    /run/systemd/journal/stdout
 unix  3      [ ]         STREAM     CONNECTED     47861    
+unix  3      [ ]         STREAM     CONNECTED     71724    
 unix  3      [ ]         STREAM     CONNECTED     52951    
 unix  3      [ ]         STREAM     CONNECTED     51069    
 unix  3      [ ]         STREAM     CONNECTED     51231    @/tmp/dbus-9xcPQMDW
@@ -719,6 +720,7 @@ unix  3      [ ]         STREAM     CONNECTED     49783    /var/run/dbus/system_
 unix  3      [ ]         STREAM     CONNECTED     52068    /run/user/1000/bus
 unix  3      [ ]         STREAM     CONNECTED     47996    /run/systemd/journal/stdout
 unix  3      [ ]         STREAM     CONNECTED     48585    
+unix  3      [ ]         STREAM     CONNECTED     71713    
 unix  3      [ ]         STREAM     CONNECTED     53017    
 unix  3      [ ]         STREAM     CONNECTED     51228    /var/run/dbus/system_bus_socket
 unix  3      [ ]         STREAM     CONNECTED     47736    
@@ -733,6 +735,7 @@ unix  3      [ ]         STREAM     CONNECTED     51973
 unix  3      [ ]         STREAM     CONNECTED     51489    /run/systemd/journal/stdout
 unix  3      [ ]         STREAM     CONNECTED     47920    @/tmp/.X11-unix/X1024
 unix  3      [ ]         STREAM     CONNECTED     47887    /run/user/121/bus
+unix  3      [ ]         STREAM     CONNECTED     70651    /run/systemd/journal/stdout
 unix  3      [ ]         STREAM     CONNECTED     54853    /var/run/dbus/system_bus_socket
 unix  3      [ ]         STREAM     CONNECTED     52900    
 unix  3      [ ]         STREAM     CONNECTED     49738    /run/user/121/bus
@@ -766,6 +769,7 @@ unix  3      [ ]         STREAM     CONNECTED     52679    /run/systemd/journal/
 unix  3      [ ]         STREAM     CONNECTED     51484    /run/user/1000/bus
 unix  3      [ ]         STREAM     CONNECTED     47886    
 unix  3      [ ]         STREAM     CONNECTED     48587    
+unix  3      [ ]         STREAM     CONNECTED     71465    
 unix  2      [ ]         DGRAM                    54428    
 unix  3      [ ]         STREAM     CONNECTED     53022    
 unix  3      [ ]         STREAM     CONNECTED     52362    /run/systemd/journal/stdout
@@ -796,6 +800,7 @@ unix  3      [ ]         STREAM     CONNECTED     48747
 unix  3      [ ]         STREAM     CONNECTED     52742    /run/systemd/journal/stdout
 unix  3      [ ]         STREAM     CONNECTED     48652    
 unix  3      [ ]         STREAM     CONNECTED     47834    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     70649    /run/user/1000/bus
 unix  3      [ ]         STREAM     CONNECTED     60239    @/tmp/.X11-unix/X0
 unix  3      [ ]         STREAM     CONNECTED     52991    
 unix  2      [ ]         DGRAM                    50141    
@@ -812,6 +817,7 @@ unix  3      [ ]         STREAM     CONNECTED     52791    /run/systemd/journal/
 unix  3      [ ]         STREAM     CONNECTED     50696    
 unix  3      [ ]         STREAM     CONNECTED     47995    
 unix  3      [ ]         STREAM     CONNECTED     48674    
+unix  3      [ ]         STREAM     CONNECTED     71466    /var/run/dbus/system_bus_socket
 unix  3      [ ]         STREAM     CONNECTED     53023    /run/systemd/journal/stdout
 unix  3      [ ]         STREAM     CONNECTED     51520    /run/user/1000/bus
 unix  3      [ ]         STREAM     CONNECTED     51385    
@@ -877,6 +883,7 @@ unix  3      [ ]         STREAM     CONNECTED     52063
 unix  3      [ ]         STREAM     CONNECTED     50629    
 unix  3      [ ]         STREAM     CONNECTED     48018    
 unix  3      [ ]         STREAM     CONNECTED     47933    /run/user/121/bus
+unix  3      [ ]         STREAM     CONNECTED     70648    
 unix  3      [ ]         DGRAM                    71004    
 unix  3      [ ]         STREAM     CONNECTED     53024    
 unix  2      [ ]         DGRAM                    49773    

@@ -70,7 +70,7 @@ div, p { color:#000; }
 }
 .contents .mainSec .mainUploadBtn:hover { background:#fff; color:#000; }
 
-.contents .uploadSec { background:#fff; width: 1080px; height: 100%; margin:120px auto; text-align: center;}
+.contents .uploadSec { background:#fff; width: 980px; height: 100%; margin:120px auto; text-align: center;}
 .contents .uploadSec .title { }
 .contents .uploadSec .title h3 { font-size:2.8rem; font-family: 'Montserrat', sans-serif; font-weight: bold; }
 .contents .uploadSec .title .disc { font-size: 14px; font-weight: 400; margin-top: 10px; font-family: 'Roboto', sans-serif;  color: #6c757d;}
@@ -115,7 +115,7 @@ div, p { color:#000; }
     border-radius: 0 5px 5px 0;}
 .contents .uploadSec .uploadedList {  }
 .contents .uploadSec .uploadedList .title { font-family: 'Montserrat', sans-serif; font-weight: bold; text-align: left; margin:0 0 10px; font-size:20px; }
-.contents .uploadSec .uploadedList .list { width:1080px; margin: 40px auto; }
+.contents .uploadSec .uploadedList .list { width:980px; margin: 40px auto; }
 .contents .uploadSec .uploadedList .list ul { overflow: hidden; display: flex; }
 .contents .uploadSec .uploadedList .list ul li {  
   width: 200px; border: 1.5px solid #c8c8c8; border-radius:10px; margin-right: 5%; padding: 25px 0;}

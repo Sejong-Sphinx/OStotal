@@ -33,27 +33,26 @@
                 <div class="dashNode">
                     <h3 class="nodeName">OS Information</h3>
                     <div class="nodeContent">
-                        <h4>Ubuntu 18.04</h4>
-                        <img class="ubuntubg" src="/img/ubuntubg.png" alt="OS Background">
+                        <h4>Red Star 3.0</h4>
+                        <img class="redstarbg" src="/img/redstarbg.png" alt="OS Background">
                         <a class="cmuBtn" href="/community.html">커뮤니티 보기</a>
                         <div class="osInfo">
-                            File Name: ubuntu-18.04.4-desktop-amd64.iso<br>
-                            Size: 1,348,312 KB<br><br>
+                            File Name: redstar_desktop3.0_sign.iso<br>
+                            Size: 2,614,645 KB<br><br>
                             Hash:<br>
-                            md5 &emsp;&emsp;&nbsp;c73e0f186476a78d691c48b493b54669<br>
-                            sha256 &emsp;72b79ee2ca46cd4850080265622b83af7a38322f4c633812d49ba4b1571f5b2d<br><br>
+                            md5 &emsp;&emsp;&nbsp;5f1c506007159f4612d1a099e79e0b1c<br>
+                            sha256 &emsp;9a757e16bb47e7183b3aa0c09cb1c553a5aef3d1eeb4c959b25cec7be4788f81<br><br>
                             History:<br>
-                            First submission &emsp;2020-05-12<br>
-                            Last submission &emsp;2020-05-24
+                            First submission &emsp;2020-05-19<br>
+                            Last submission &emsp;2020-05-28
                         </div>
                     </div>
                 </div>
                 <div class="dashNode">
                     <h3 class="nodeName">Processes List</h3>
-                    <!-- <object class="textfile" data="file/linuxfile/pstree.txt"></object> -->
-                    <textarea id="prtPsFile"></textarea>
+                    <textarea id="redpsfile"></textarea>
                     <script>
-                        readTextFile("/file/linuxfile/pstree.txt");
+                        readTextFile("/file/redstarfile/pstree.txt");
                         function readTextFile(file)
                         {
                             var rawFile = new XMLHttpRequest();
@@ -65,8 +64,7 @@
                                     if(rawFile.status === 200 || rawFile.status == 0)
                                     {
                                         var allText = rawFile.responseText;
-                                        document.getElementById("prtPsFile").innerHTML=allText;
-                                        // alert(allText);
+                                        document.getElementById("redpsfile").innerHTML=allText;
                                     }
                                 }
                             }
@@ -87,7 +85,7 @@
                                     labels: ['00:00','','', '00:05','','', '00:10','','', '00:15','','', '00:20','','', '00:25'],
                                     datasets: [{
                                         label: '# CPU usage',
-                                        data: [30, 55, 50, 100, 75, 45, 7, 35, 40, 20, 20, 25, 10, 12.5, 10, 10],
+                                        data: [30, 80, 100, 97, 100, 85, 95, 90, 40, 25, 30, 25, 15, 12.5, 15, 10],
                                         backgroundColor: [
                                             'rgba(54, 162, 235, 0.2)'
                                         ],
@@ -127,37 +125,9 @@
                 </div>
                 <div class="dashNode">
                     <h3 class="nodeName">Network List</h3>
-                    <img src="/img/warning_y.png" alt="">
-                    <h5>2 WARNING</h5>
-                    <div class="netcontent">
-                        <textarea id="prtNetFile1"></textarea>
-                        <textarea id="prtNetFile2"></textarea>
-                        <textarea id="prtNetFile3"></textarea>
-                    </div>
+                    <textarea id="rednetfile"></textarea>
                     <script>
-                        readTextFile("/file/linuxfile/net1.txt");
-                        function readTextFile(file)
-                        {
-                            var rawFile = new XMLHttpRequest();
-                            rawFile.open("GET", file, false);
-                            rawFile.onreadystatechange = function ()
-                            {
-                                if(rawFile.readyState === 4)
-                                {
-                                    if(rawFile.status === 200 || rawFile.status == 0)
-                                    {
-                                        console.log(rawFile.responseText);
-                                        var allText = rawFile.responseText;
-                                        document.getElementById("prtNetFile1").innerHTML = allText;
-                                    }
-                                }
-                            }
-                            rawFile.send(null);
-                        }
-                    </script>
-
-                    <script>
-                        readTextFile("/file/linuxfile/net2.txt");
+                        readTextFile("file/redstarfile/netstat.txt");
                         function readTextFile(file)
                         {
                             var rawFile = new XMLHttpRequest();
@@ -169,28 +139,7 @@
                                     if(rawFile.status === 200 || rawFile.status == 0)
                                     {
                                         var allText = rawFile.responseText;
-                                        document.getElementById("prtNetFile2").innerHTML=allText;
-                                    }
-                                }
-                            }
-                            rawFile.send(null);
-                        }
-                    </script>
-                                            
-                    <script>
-                        readTextFile("/file/linuxfile/netstat.txt");
-                        function readTextFile(file)
-                        {
-                            var rawFile = new XMLHttpRequest();
-                            rawFile.open("GET", file, false);
-                            rawFile.onreadystatechange = function ()
-                            {
-                                if(rawFile.readyState === 4)
-                                {
-                                    if(rawFile.status === 200 || rawFile.status == 0)
-                                    {
-                                        var allText = rawFile.responseText;
-                                        document.getElementById("prtNetFile3").innerHTML=allText;
+                                        document.getElementById("rednetfile").innerHTML=allText;
                                     }
                                 }
                             }
